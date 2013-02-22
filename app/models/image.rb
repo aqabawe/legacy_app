@@ -18,4 +18,8 @@ class Image < ActiveRecord::Base
 
   named_scope :parents, :conditions => {:parent_id => nil}
 
+  def const_defined?(var)
+    Image.const_defined?(var)
+  end
+
 end
