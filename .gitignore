@@ -3,3 +3,7 @@
 /tmp
 /.bundle/config
 /public/assets
+config/database.yml
+*.DS_Store*
+*~
+*.swp
