@@ -18,8 +18,9 @@ class Image < ActiveRecord::Base
 
   named_scope :parents, :conditions => {:parent_id => nil}
 
+  # Called in attachment_fu plugin for I18n.
   def const_defined?(var)
-    Image.const_defined?(var)
+    false
   end
 
 end
