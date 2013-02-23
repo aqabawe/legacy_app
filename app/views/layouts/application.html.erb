@@ -30,8 +30,7 @@
     google.load("jquery", "1.7");
   </script>
 
-  <%= include_javascripts :common %>
-  <%= yield :javascripts %>
+  <%= javascript_include_tag :defaults %>
 
   <%= csrf_meta_tag %>
 </head>
