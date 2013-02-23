@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.0.20'
-gem "mysql", '~> 2.7.0'
+gem "mysql2"
+gem "activerecord-mysql2-adapter"
 gem "rake", '0.9.2'
 
 gem 'will_paginate', '~> 2.3.0'
@@ -18,7 +19,7 @@ group :linux do
 end
 
 group :development, :test, :cucumber do
-  gem 'ruby-debug'
+  gem 'debugger'
 end
 
 group :test, :cucumber do

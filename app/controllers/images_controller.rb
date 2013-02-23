@@ -12,7 +12,6 @@ class ImagesController < ApplicationController
 
   def create
     @image = Image.new(params[:image])
-
     if @image.save
       flash[:success] = "Image created"
       redirect_to images_path
