@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130223211627) do
+ActiveRecord::Schema.define(:version => 20130301122621) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(:version => 20130223211627) do
     t.string   "filename"
     t.integer  "height"
     t.integer  "width"
-    t.integer  "parent_id"
+    t.integer  "elder_id"
     t.string   "thumbnail"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -54,6 +54,6 @@ ActiveRecord::Schema.define(:version => 20130223211627) do
     t.datetime "picture_updated_at"
   end
 
-  add_index "images", ["parent_id"], :name => "index_images_on_parent_id"
+  add_index "images", ["elder_id"], :name => "index_images_on_parent_id"
 
 end

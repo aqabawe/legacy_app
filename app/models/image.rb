@@ -5,6 +5,6 @@ class Image < ActiveRecord::Base
 
   has_many :featured_images, :dependent => :destroy
 
-  scope :parents, where(:parent_id => nil)
+  scope :elders, where(:elder_id => nil)
 
 end

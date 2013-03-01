@@ -3,7 +3,7 @@ class ImagesController < ApplicationController
   before_filter :find_image, :except => [:index, :new, :create]
 
   def index
-    @images = Image.parents.paginate(:page => params[:page], :per_page => 10, :order =>:created_at)
+    @images = Image.elders.paginate(:page => params[:page], :per_page => 10, :order =>:created_at)
   end
 
   def new
