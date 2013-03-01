@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 gem "mysql2"
-gem "activerecord-mysql2-adapter"
 gem "rake", '0.9.2'
 
 gem 'will_paginate'
@@ -11,6 +10,7 @@ gem 'daemons', '1.0.10'
 gem 'delayed_job'
 gem 'execjs', '<= 1.2.6'
 gem 'jammit'
+gem 'jquery-rails', '~> 2.1'
 gem 'barista', :git => 'https://github.com/Sutto/barista.git', :ref => "eeba1e32d1"
 group :linux do
   # Mac's ship with the jsc command, so don't need this
