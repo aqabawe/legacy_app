@@ -7,7 +7,7 @@ gem "rake", '0.9.2'
 gem 'will_paginate'
 gem "paperclip", "~> 3.0"
 gem 'daemons', '1.0.10'
-gem 'delayed_job'
+gem 'delayed_job_active_record'
 gem 'execjs', '<= 1.2.6'
 gem 'jammit'
 gem 'jquery-rails', '~> 2.1'
