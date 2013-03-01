@@ -8,7 +8,7 @@
 
 <% @images.each do |image| %>
   <div class="four columns">
-    <%= image_tag image.public_filename(:small) %>
+    <%= image_tag image.picture.url(:thumb) %>
 
     <div class="controls">
       <%= link_to "Edit", edit_image_path(image) %>

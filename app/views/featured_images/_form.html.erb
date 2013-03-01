@@ -1,5 +1,5 @@
 <% form_for [@image, @featured_image], :html => {:class => 'featured_image'} do |f| %>
-  <%= image_tag @image.public_filename(:small) %>
+  <%= image_tag @image.picture.url(:thumb) %>
 
   <fieldset>
     <%= f.label :feature_at %>

@@ -1,26 +1,10 @@
 class Image < ActiveRecord::Base
 
-  cattr_accessor :thumbnail_sizes
-  @@thumbnail_sizes = {
-    :medium => 512,
-    :small => 128,
-    :tiny => 64
-  }
-
-  has_attachment :storage        => :file_system,
-                 :size           => 1..5.megabytes,
-                 :processor      => 'MiniMagick',
-                 :background     => true,
-                 :thumbnails     => Image.thumbnail_sizes
-  validates_as_attachment
+  attr_accessible :picture, :caption
+  has_attached_file :picture, :styles => { :medium => "512x512", :thumb => "128x128>", :tiny => "64"}
 
   has_many :featured_images, :dependent => :destroy
 
-  named_scope :parents, :conditions => {:parent_id => nil}
-
-  # Called in attachment_fu plugin for I18n.
-  def const_defined?(var)
-    false
-  end
+  scope :parents, where(:parent_id => nil)
 
 end
