@@ -23,17 +23,13 @@ group :development, :test, :cucumber do
 end
 
 group :test, :cucumber do
-  gem 'rspec-rails', '~> 1.3.3', :require => false
-
-  # Version 1.0.3 of machinist from RubyGems.org doesn't work
-  #
-  # So this is one downloaded from 'http://gems.github.com'
-  gem "machinist", '1.0.3', :require => false, :path => 'vendor/github_gems/notahat-machinist-1.0.3'
-  gem "faker",             "0.3.1", :require => false
+  gem 'rspec-rails', :require => false
+  gem "machinist", '2'
+  gem "faker", :require => false
 end
 
 group :cucumber do
-  gem 'cucumber-rails', '~> 0.3.2', :require => false
+  gem 'cucumber-rails', :require => false
   gem 'webrat', '0.5.3', :require => false
   gem 'launchy', :require => false
   gem 'database_cleaner',  '~> 0.2.3', :require  => false

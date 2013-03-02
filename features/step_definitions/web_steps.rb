@@ -64,7 +64,7 @@ end
 # Use this step in conjunction with Rail's datetime_select helper. For example:
 # When I select "December 25, 2008 10:00" as the date and time
 When /^(?:|I )select "([^"]*)" as the date and time$/ do |time|
-  select_datetime(time)
+  select_datetime(time, :label => 'feature_at')
 end
 
 # Use this step when using multiple datetime_select helpers on a page or
@@ -136,13 +136,12 @@ When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
   when "gif"
     type = "image/gif"
   end
-  
-  attach_file(field, path, type)
+  attach_file(field, path)
 end
 
 Then /^(?:|I )should see "([^"]*)"$/ do |text|
   if response.respond_to? :should
-    response.should contain(text)
+    should have_selector ".alert", text: text
   else
     assert_contain text
   end
