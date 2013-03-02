@@ -12,9 +12,10 @@ gem 'execjs', '<= 1.2.6'
 gem 'jammit'
 gem 'jquery-rails', '~> 2.1'
 gem 'barista', :git => 'https://github.com/Sutto/barista.git', :ref => "eeba1e32d1"
+gem 'psych'
 group :linux do
   # Mac's ship with the jsc command, so don't need this
-  gem 'therubyracer'
+  gem 'therubyracer', :platform => 'ruby'
 end
 
 group :development, :test, :cucumber do

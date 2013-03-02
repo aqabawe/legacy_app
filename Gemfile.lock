@@ -6,11 +6,6 @@ GIT
     barista (1.2.1)
       coffee-script (~> 2.2)
 
-PATH
-  remote: vendor/github_gems/notahat-machinist-1.0.3
-  specs:
-    machinist (1.0.3)
-
 GEM
   remote: https://rubygems.org/
   specs:
